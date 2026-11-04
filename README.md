@@ -8,7 +8,7 @@ Static homepage for **Femmer Fusion Fitness**: online home workouts and Zumba cl
 - WhatsApp CTAs link to `wa.me/919946785211` with a prefilled message.
 
 ## Placeholders to replace
-Trainer name and bio; testimonials (hidden in an HTML comment); class app; batch timings; missed-class policy; Instagram handle.
+Trainer bio (an HTML comment marks where it goes); testimonials (hidden in an HTML comment); morning batch timings.
 
 ## Deploy
 Vercel deploys this as a plain static site with no build step. Every push to `main` deploys to production.
