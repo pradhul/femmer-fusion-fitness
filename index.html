@@ -73,7 +73,8 @@ section{padding:64px 0}
 .step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--plum));color:#fff;font:700 22px Poppins;display:grid;place-items:center;box-shadow:0 8px 18px rgba(224,21,122,.3)}
 .step h3{color:var(--plum);font-size:17px}.step p{color:var(--mut);font-size:14px}
 .trainer{display:grid;gap:26px;align-items:center;text-align:center}
-.avatar{width:200px;height:200px;margin:0 auto;border-radius:50%;background:repeating-linear-gradient(45deg,#fde3ef 0 12px,#fff0f6 12px 24px);border:6px solid #fff;box-shadow:0 0 0 4px var(--pink),0 20px 40px rgba(107,30,94,.2);display:grid;place-items:center;color:var(--pink);font-size:13px;font-weight:600;text-align:center;padding:20px}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.avatar{width:200px;height:200px;margin:0 auto;border-radius:50%;background:repeating-linear-gradient(45deg,#fde3ef 0 12px,#fff0f6 12px 24px);border:6px solid #fff;box-shadow:0 0 0 4px var(--pink),0 20px 40px rgba(107,30,94,.2);display:grid;place-items:center;overflow:hidden;padding:0}
 .ph{display:inline-block;background:#fff6d6;border:1.5px dashed #e0a800;color:#8a6500;font-size:12px;font-weight:600;padding:3px 10px;border-radius:8px;margin-bottom:10px;font-family:Poppins}
 .trainer h3{font-size:24px;color:var(--plum)}.trainer p{color:var(--mut)}
 .tst{border:2px dashed #f0b6d2;background:#fffafd}.tst .q{font-family:Georgia,serif;font-size:50px;color:var(--pink);line-height:.6;height:24px}
@@ -164,7 +165,7 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
 </div></section>
 
 <section class="soft"><div class="wrap trainer">
- <div class="avatar">[Trainer photo]</div>
+ <div class="avatar"><img src="assets/trainer.jpg" alt="Femmer Fusion Fitness trainer" width="640" height="640" loading="lazy"></div>
  <div><div class="kick script" style="font-size:30px;color:var(--pink)">Meet your trainer</div>
   <span class="ph">PLACEHOLDER</span>
   <h3>[Trainer name here]</h3>
@@ -172,6 +173,7 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
  </div>
 </div></section>
 
+<!-- Testimonials hidden until real reviews are available
 <section><div class="wrap">
  <div class="st"><div class="kick">Love notes</div><h2 data-ml="ഞങ്ങളുടെ members പറയുന്നത്" data-en="What our members say"></h2></div>
  <div class="grid g3">
@@ -180,6 +182,7 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
   <div class="card tst"><span class="ph">Sample testimonial – replace with real ones</span><div class="q">“</div><p>[Member's words about their experience go here.]</p><div class="who"><i></i>[Name, Place]</div></div>
  </div>
 </div></section>
+-->
 
 <section id="pricing" class="soft"><div class="wrap">
  <div class="st"><div class="kick">Simple pricing</div><h2 data-ml="ഒരു മാസത്തേക്ക്, എല്ലാം ഉൾപ്പെടെ" data-en="One simple monthly plan"></h2></div>
@@ -192,6 +195,7 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
    <li data-ml="തുടക്കക്കാർക്ക് ചേരുന്ന modifications" data-en="Beginner-friendly modifications"></li>
    <li data-ml="സ്ത്രീകൾക്ക് മാത്രമായുള്ള friendly group" data-en="A friendly, women-only group"></li>
   </ul>
+  <div class="urg" style="background:#e8f7f6;color:#0b5f5f">🕘 <span data-ml="Evening batch: രാത്രി 8:45 – 9:45 (ഇപ്പോൾ നടക്കുന്നു) · Morning batches ഉടൻ വരുന്നു" data-en="Evening batch: 8:45 – 9:45 PM (running now) · Morning batches coming soon"></span></div>
   <div class="urg">⏰ <span data-ml="ഈ ഓഫർ കുറച്ച് ദിവസങ്ങൾ കൂടി മാത്രം! സ്ലോട്ടുകൾ തീരുന്നതിന് മുമ്പ് ഇന്ന് തന്നെ Join ചെയ്യൂ!" data-en="This offer is only for a few more days! Join today before the slots fill up!"></span></div>
   <a class="btn btn-wa wa" style="width:100%" href="#"><svg class="wa-ic" viewBox="0 0 32 32"><use href="#wa"/></svg><span data-ml="WhatsApp-ൽ Join ചെയ്യൂ" data-en="Join on WhatsApp"></span></a>
   </div>
@@ -203,19 +207,19 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
  <div class="faq">
   <details open><summary data-ml="Equipment എന്തെങ്കിലും വേണോ?" data-en="Do I need any equipment?"></summary><p data-ml="വേണ്ട. ഒരു yoga mat-ഉം വെള്ളക്കുപ്പിയും മതി. Light dumbbells ഉണ്ടെങ്കിൽ നല്ലത്, നിർബന്ധമില്ല." data-en="No. A yoga mat and a water bottle are enough. Light dumbbells help but are optional."></p></details>
   <details><summary data-ml="ക്ലാസ് ഏത് app വഴിയാണ്?" data-en="Which app are classes on?"></summary><p data-ml="[App പേര് ഇവിടെ — ഉദാ: Google Meet / Zoom]. Join ചെയ്യുമ്പോൾ link WhatsApp-ൽ അയച്ചുതരും." data-en="[App name here — e.g., Google Meet / Zoom]. We'll send you the link on WhatsApp when you join."></p></details>
-  <details><summary data-ml="ക്ലാസ് സമയം എപ്പോഴാണ്?" data-en="What are the class timings?"></summary><p data-ml="[Batch timings ഇവിടെ ചേർക്കുക]. നിങ്ങൾക്ക് സൗകര്യമുള്ള batch WhatsApp-ൽ ചോദിച്ചറിയാം." data-en="[Add batch timings here]. Ask us on WhatsApp for the batch that suits you."></p></details>
+  <details><summary data-ml="ക്ലാസ് സമയം എപ്പോഴാണ്?" data-en="What are the class timings?"></summary><p data-ml="ഇപ്പോൾ <b>Evening batch: രാത്രി 8:45 – 9:45</b> നടന്നുകൊണ്ടിരിക്കുന്നു. Morning batches ഉടൻ ആരംഭിക്കും! കൂടുതൽ വിവരങ്ങൾക്ക് Trainer-നെ WhatsApp-ൽ ബന്ധപ്പെടൂ." data-en="Our <b>evening batch, 8:45 PM – 9:45 PM</b>, is running now. Morning batches are coming soon! Contact the trainer on WhatsApp for more info."></p></details>
   <details><summary data-ml="ഒരു ക്ലാസ് miss ആയാലോ?" data-en="What if I miss a class?"></summary><p data-ml="വിഷമിക്കേണ്ട! [Recording / makeup class policy ഇവിടെ ചേർക്കുക]. Trainer-നോട് പറഞ്ഞാൽ മതി." data-en="Don't worry! [Add recording / make-up class policy here]. Just let your trainer know."></p></details>
  </div>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap grid g2">
- <div class="insta"><div class="script" style="font-size:30px">Follow the fun</div><h2 data-ml="Instagram-ൽ ഞങ്ങളെ follow ചെയ്യൂ" data-en="Follow us on Instagram"></h2><p data-ml="Workout tips, Zumba videos, diet ideas — എല്ലാം അവിടെയുണ്ട്!" data-en="Workout tips, Zumba clips and diet ideas — all there!"></p><a class="btn" href="#">@[instagram_handle]</a></div>
+ <div class="insta"><div class="script" style="font-size:30px">Follow the fun</div><h2 data-ml="Instagram-ൽ ഞങ്ങളെ follow ചെയ്യൂ" data-en="Follow us on Instagram"></h2><p data-ml="Workout tips, Zumba videos, diet ideas — എല്ലാം അവിടെയുണ്ട്!" data-en="Workout tips, Zumba clips and diet ideas — all there!"></p><a class="btn" href="https://www.instagram.com/f3_femmer_fusion_fitness/" target="_blank" rel="noopener">@f3_femmer_fusion_fitness</a></div>
  <div class="final"><div class="script">Your Fitness Your Way</div><h2 data-ml="നിങ്ങളുടെ മാറ്റം ഇന്ന് തന്നെ തുടങ്ങാം!" data-en="Your transformation starts today!"></h2><a class="btn btn-wa wa" style="margin-top:18px" href="#"><svg class="wa-ic" viewBox="0 0 32 32"><use href="#wa"/></svg>99467 85211</a></div>
 </div></section>
 </main>
 <footer><div class="wrap">
  <div class="script">Femmer Fusion Fitness</div><div class="tri">FIT · HEALTHY · CONFIDENT</div>
- <div class="row"><a class="wa" href="#">WhatsApp: 99467 85211</a><span>·</span><a href="#">Instagram</a></div>
+ <div class="row"><a class="wa" href="#">WhatsApp: 99467 85211</a><span>·</span><a href="https://www.instagram.com/f3_femmer_fusion_fitness/" target="_blank" rel="noopener">Instagram: @f3_femmer_fusion_fitness</a></div>
  <small>Stronger · Healthier · Happier &nbsp;|&nbsp; © 2026 Femmer Fusion Fitness</small>
 </div></footer>
 <a class="fab wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><use href="#wa"/></svg></a>
