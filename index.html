@@ -81,7 +81,11 @@ section{padding:64px 0}
 .tst{border:2px dashed #f0b6d2;background:#fffafd}.tst .q{font-family:Georgia,serif;font-size:50px;color:var(--pink);line-height:.6;height:24px}
 .tst p{color:var(--mut);font-style:italic;font-size:14.5px}.tst .who{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:13px;font-weight:600;color:var(--plum)}
 .tst .who i{width:36px;height:36px;border-radius:50%;background:var(--soft2)}
-.price{max-width:440px;margin:0 auto;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(107,30,94,.18);border:1px solid #f6cde0}
+.prices{display:grid;gap:20px;max-width:920px;margin:0 auto}
+.price{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(107,30,94,.18);border:1px solid #f6cde0}
+.price.personal .ptop{background:linear-gradient(135deg,#3d0f36,#7B3FBF)}
+.price.personal .so{background:#e8d5ff;color:#3d0f36}
+@media(min-width:720px){.prices{grid-template-columns:1fr 1fr;align-items:stretch}}
 .ptop{background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;text-align:center;padding:28px 20px}
 .ptop .so{display:inline-block;background:#FFD23F;color:var(--plum2);font:800 12px Poppins;letter-spacing:2px;padding:5px 14px;border-radius:99px}
 .ptop .amt{font:800 64px Poppins;line-height:1.1;margin-top:8px}.ptop .amt small{font-size:18px;font-weight:600}
@@ -148,11 +152,12 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
 
 <section id="programs" class="soft"><div class="wrap">
  <div class="st"><div class="kick">Our Programmes</div><h2 data-ml="നിങ്ങൾക്ക് ചേരുന്ന ക്ലാസ് തിരഞ്ഞെടുക്കൂ" data-en="Find the class that suits you"></h2></div>
- <div class="grid g2 g4">
+ <div class="grid g2 g3">
   <div class="prog p1"><span class="pill">💃 Dance cardio</span><h3>Zumba</h3><p data-ml="പാട്ടും ഡാൻസും ചേർന്ന രസകരമായ workout — വിയർക്കുന്നത് പോലും അറിയില്ല!" data-en="A fun dance workout to great music — you'll forget you're exercising!"></p></div>
   <div class="prog p2"><span class="pill">💪 Toning</span><h3>Home Strength</h3><p data-ml="Bodyweight-ഉം light dumbbells-ഉം ഉപയോഗിച്ച് ശരീരം ശക്തമാക്കാം." data-en="Build strength and tone up with bodyweight and light dumbbells."></p></div>
   <div class="prog p3"><span class="pill">🔥 Fat burn</span><h3>Weight Loss</h3><p data-ml="Workout-ഉം diet guidance-ഉം ഒരുമിച്ച് — പതിയെ, പക്ഷേ ഉറപ്പായ മാറ്റം." data-en="Workouts plus diet guidance for steady, sustainable results."></p></div>
   <div class="prog p4"><span class="pill">🌱 Start here</span><h3>Beginners</h3><p data-ml="ഇതുവരെ workout ചെയ്തിട്ടില്ലേ? ഒട്ടും പേടിക്കേണ്ട, ഇവിടെ നിന്ന് തുടങ്ങാം." data-en="Never worked out before? No worries — start right here."></p></div>
+  <div class="prog" style="background:linear-gradient(135deg,#3d0f36,#7B3FBF)"><span class="pill">👤 1:1</span><h3>Personal Training</h3><p data-ml="Trainer-ന്റെ personal guidance, ആഴ്ചയിൽ 5 ദിവസം ക്ലാസ് + personalized diet — ₹6,500/month." data-en="1:1 trainer guidance, 5 classes a week + personalized diet — ₹6,500/month."></p></div>
  </div>
 </div></section>
 
@@ -188,9 +193,10 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
 -->
 
 <section id="pricing" class="soft"><div class="wrap">
- <div class="st"><div class="kick">Simple pricing</div><h2 data-ml="ഒരു മാസത്തേക്ക്, എല്ലാം ഉൾപ്പെടെ" data-en="One simple monthly plan"></h2></div>
+ <div class="st"><div class="kick">Simple pricing</div><h2 data-ml="നിങ്ങൾക്ക് ചേരുന്ന പ്ലാൻ തിരഞ്ഞെടുക്കൂ" data-en="Choose the plan that fits you"></h2><p data-ml="Group class അല്ലെങ്കിൽ Personal Training — രണ്ടും Zoom വഴി Live ആണ്." data-en="Group classes or 1:1 personal training — both live on Zoom."></p></div>
+ <div class="prices">
  <div class="price">
-  <div class="ptop"><span class="so">SPECIAL OFFER</span><div class="amt">₹700<small> / month</small></div><div class="only" data-ml="മാത്രം!" data-en="only!"></div></div>
+  <div class="ptop"><span class="so">GROUP CLASS</span><div class="amt">₹700<small> / month</small></div><div class="only" data-ml="മാത്രം!" data-en="only!"></div></div>
   <div class="pbody"><ul>
    <li data-ml="ആഴ്ചയിൽ 4 Live ക്ലാസുകൾ (Zoom വഴി)" data-en="Four live classes per week (on Zoom)"></li>
    <li data-ml="Zumba &amp; Home Workout sessions" data-en="Zumba & home-workout sessions"></li>
@@ -204,6 +210,19 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
   <a class="btn btn-wa wa" style="width:100%" href="#"><svg class="wa-ic" viewBox="0 0 32 32"><use href="#wa"/></svg><span data-ml="WhatsApp-ൽ Join ചെയ്യൂ" data-en="Join on WhatsApp"></span></a>
   </div>
  </div>
+ <div class="price personal">
+  <div class="ptop"><span class="so">PERSONAL TRAINING</span><div class="amt">₹6,500<small> / month</small></div><div class="only" data-ml="വ്യക്തിഗത guidance" data-en="1:1 guidance"></div></div>
+  <div class="pbody"><ul>
+   <li data-ml="Trainer നേരിട്ട് നൽകുന്ന personal guidance &amp; training" data-en="Personal guidance &amp; training directly from the trainer"></li>
+   <li data-ml="ആഴ്ചയിൽ 5 ദിവസം ക്ലാസ്" data-en="Classes 5 days a week"></li>
+   <li data-ml="നിങ്ങൾക്ക് അനുയോജ്യമായ diet management (recommendation)" data-en="Personalized diet management &amp; recommendations"></li>
+   <li data-ml="നിങ്ങളുടെ ലക്ഷ്യങ്ങൾക്ക് അനുസരിച്ച് plan" data-en="A plan tailored to your goals"></li>
+  </ul>
+  <div class="urg" style="background:#f3e8ff;color:#4a2a6b">💬 <span data-ml="കൂടുതൽ വിവരങ്ങൾക്ക് Trainer-നെ ബന്ധപ്പെടൂ" data-en="Contact the trainer for more information"></span></div>
+  <a class="btn btn-wa wa-pt" style="width:100%" href="#"><svg class="wa-ic" viewBox="0 0 32 32"><use href="#wa"/></svg><span data-ml="Personal Training ചോദിക്കൂ" data-en="Ask about Personal Training"></span></a>
+  </div>
+ </div>
+ </div>
 </div></section>
 
 <section id="faq"><div class="wrap" style="max-width:780px">
@@ -216,6 +235,7 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
   <details><summary data-ml="ആഴ്ചയിൽ എത്ര ക്ലാസുകൾ ഉണ്ട്?" data-en="How many classes are there per week?"></summary><p data-ml="ആഴ്ചയിൽ 4 Live ക്ലാസുകൾ." data-en="Four live classes per week."></p></details>
   <details><summary data-ml="Free Trial Class ഉണ്ടോ?" data-en="Is there a free trial class?"></summary><p data-ml="ഉണ്ട്! Free trial class ലഭ്യമാണ്. കൂടുതൽ details-ന് Trainer-നെ WhatsApp-ൽ ബന്ധപ്പെടൂ." data-en="Yes! Free trial classes are available. Contact the trainer on WhatsApp for details."></p></details>
   <details><summary data-ml="Diet Plan-ൽ എന്തൊക്കെയുണ്ട്?" data-en="What's in the diet plan?"></summary><p data-ml="Members-ന് Free Diet Plan ലഭിക്കും. കൂടുതൽ details-ന് Trainer-നോട് ചോദിക്കൂ." data-en="Members get a free diet plan. Ask the trainer for details."></p></details>
+  <details><summary data-ml="Personal Training ഉണ്ടോ?" data-en="Do you offer personal training?"></summary><p data-ml="ഉണ്ട്! Personal Training-ൽ Trainer നേരിട്ട് personal guidance &amp; training നൽകും. ആഴ്ചയിൽ 5 ദിവസം ക്ലാസ് + personalized diet management. ഫീസ് ₹6,500/month. കൂടുതൽ വിവരങ്ങൾക്ക് Trainer-നെ WhatsApp-ൽ ബന്ധപ്പെടൂ." data-en="Yes! With Personal Training you get 1:1 guidance and training from the trainer, classes 5 days a week, plus personalized diet recommendations. Fee: ₹6,500/month. Contact the trainer on WhatsApp for more info."></p></details>
   <details><summary data-ml="ഗർഭിണിയാണെങ്കിലോ എന്തെങ്കിലും അസുഖമുണ്ടെങ്കിലോ?" data-en="What if I'm pregnant or have a medical condition?"></summary><p data-ml="ഗർഭിണിയാണെങ്കിലോ എന്തെങ്കിലും health issues / medical conditions ഉണ്ടെങ്കിലോ ക്ലാസ് തുടങ്ങുന്നതിന് മുമ്പ് തന്നെ Trainer-നെ അറിയിക്കുക. നിങ്ങൾക്ക് പ്രത്യേകം ശ്രദ്ധ നൽകി guide ചെയ്യാൻ അത് സഹായിക്കും." data-en="If you're pregnant or have any medical condition, please tell the trainer before you start, so she can guide you separately and take extra care."></p></details>
  </div>
 </div></section>
@@ -235,10 +255,12 @@ footer .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:1
 <script>
 const MSG={ml:"ഹായ്! Femmer Fusion Fitness-ൽ join ചെയ്യാൻ താല്പര്യമുണ്ട്. Details അറിയിക്കാമോ?",en:"Hi! I'm interested in joining Femmer Fusion Fitness. Could you share the details?"};
 const TRIAL={ml:"ഹായ്! ഒരു Free Trial Class ബുക്ക് ചെയ്യാൻ ആഗ്രഹിക്കുന്നു.",en:"Hi! I'd like to book a free trial class."};
+const PT={ml:"ഹായ്! Personal Training (₹6,500) ക്കുറിച്ച് കൂടുതൽ അറിയാൻ താല്പര്യമുണ്ട്.",en:"Hi! I'd like to know more about Personal Training (₹6,500)."};
 function setLang(l){document.documentElement.lang=l;document.title=l==='en'?'Femmer Fusion Fitness – Online Home Workouts with Zumba for Women':'Femmer Fusion Fitness – സ്ത്രീകൾക്കായുള്ള Online Home Workouts & Zumba';document.querySelectorAll('[data-'+l+']').forEach(e=>e.innerHTML=e.dataset[l]);
 document.querySelectorAll('[data-set]').forEach(b=>b.classList.toggle('on',b.dataset.set===l));
 document.querySelectorAll('a.wa').forEach(a=>{a.href='https://wa.me/919946785211?text='+encodeURIComponent(MSG[l]);a.target='_blank';a.rel='noopener'});
 document.querySelectorAll('a.wa-trial').forEach(a=>{a.href='https://wa.me/919946785211?text='+encodeURIComponent(TRIAL[l]);a.target='_blank';a.rel='noopener'});
+document.querySelectorAll('a.wa-pt').forEach(a=>{a.href='https://wa.me/919946785211?text='+encodeURIComponent(PT[l]);a.target='_blank';a.rel='noopener'});
 try{localStorage.setItem('ffl',l)}catch(e){}}
 document.querySelectorAll('[data-set]').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
 const q=new URLSearchParams(location.search).get('lang');let s=null;try{s=localStorage.getItem('ffl')}catch(e){}
